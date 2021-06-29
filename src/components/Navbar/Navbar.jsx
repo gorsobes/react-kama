@@ -1,18 +1,20 @@
 import React from 'react';
 import n from './Navbar.module.css';
+import { NavLink } from 'react-router-dom';
 
 
 const Navbar = () => {
-    return  <nav className={n.nav}>
+    return  (
+    <nav className={n.nav}>
     <div className={n.item}>
-      <a href="#">Profile</a> 
+      <NavLink to="/profile" activeClassName={n.active}>Profile</NavLink> 
     </div>
     <div className={n.item}>
-    <a href="#">Messages</a> 
+    <NavLink to="/dialogs" activeClassName={n.active}>Messages</NavLink> 
      
     </div>
     <div className={n.item}>
-    <a href="#">News</a> 
+    <NavLink to="/news" activeClassName={n.active}>News</NavLink> 
      
     </div>
     <div className={n.item}>
@@ -25,6 +27,7 @@ const Navbar = () => {
     </div>
     
   </nav>
+    )
 }
 
 export default Navbar;

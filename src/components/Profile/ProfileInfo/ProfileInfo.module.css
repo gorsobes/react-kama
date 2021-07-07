@@ -1,0 +1,14 @@
+.content{
+  grid-area: c;
+  background-color: crimson;
+ 
+ }
+ .content img{
+   width: 750px;
+   height: 400px;
+    margin: 10px;
+ }
+ .item{
+   color: chartreuse;
+   margin: 10px;
+ }

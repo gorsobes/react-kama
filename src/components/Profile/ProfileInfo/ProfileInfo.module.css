@@ -12,3 +12,8 @@
    color: chartreuse;
    margin: 10px;
  }
+ #fotoProfileInfo{
+  width: 720px;
+  height: 350px;
+  border-radius: 0; 
+ }

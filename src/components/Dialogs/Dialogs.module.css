@@ -18,3 +18,12 @@
 .massage{
 
 }
+.dialodsButton{
+    width: 95px;
+    height: 25px;
+    position: relative;
+    top: 158px;
+    left: -152px;
+    border-radius: 5px;
+    border-color: #5e7993;
+}

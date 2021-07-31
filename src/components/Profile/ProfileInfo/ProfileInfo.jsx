@@ -1,5 +1,5 @@
 import React from 'react';
-import pi from './ProfileInfo.module.css';
+import p from './ProfileInfo.module.css';
 
 
 const ProfileInfo = () => {
@@ -7,7 +7,7 @@ const ProfileInfo = () => {
     <div>
    
     <div>
-     <img src="https://s1.1zoom.ru/big0/697/Love_Night_Moon_Trees_Silhouette_Two_Dating_576752_1280x853.jpg" alt="" />
+     <img id={p.fotoProfileInfo}  src="https://s1.1zoom.ru/big0/697/Love_Night_Moon_Trees_Silhouette_Two_Dating_576752_1280x853.jpg" alt="" />
      </div>
    <div>
     ava +

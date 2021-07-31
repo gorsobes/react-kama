@@ -1,0 +1,16 @@
+.sibebbarName{
+    color: blanchedalmond;
+    margin:0;
+    font-size: 14px;
+}
+img{
+    width: 40px;
+    border-radius: 50%;
+}
+.sidebarFlex{
+    display:flex;
+    align-items: baseline;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+}

@@ -5,24 +5,23 @@ import Profile from './components/Profile/Profile';
 import './App.css';
 import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
-import {BrowserRouter,Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 const App = (props)=> {
   return (
-    <BrowserRouter>
+    
    <div className='app-wrapper'>
      <Header />
-     <Navbar />
+     <Navbar sidebar={props.state.sidebar.friends} />
      <div className="app-wrapper-content">
-     {/* <Route path='/dialogs' component={Dialogs} />
-     <Route path='/profile' component={Profile} />
-     <Route path='/news' component={News} /> */}
-
-     <Route path='/dialogs' render={()=> <Dialogs messageData={props.messageData} dialogsData={props.dialogsData} />} />
-     <Route path='/profile' render={()=> <Profile posts={props.posts}/>} />
+     
+     <Route path='/dialogs' render={()=> <Dialogs messageData={props.state.messagePage.messageData} dialogsData={props.state.messagePage.dialogsData} />} />
+     <Route path='/profile' render={()=> <Profile 
+     profilePage={props.state.profilePage} 
+     dispatch={props.dispatch}/>} />
      <Route path='/news' render={()=> <News/>} />
      </div>
    </div>
-   </BrowserRouter>
+   
   );
 }
 

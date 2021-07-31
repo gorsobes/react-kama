@@ -1,9 +1,10 @@
 import React from 'react';
 import n from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
+import Sidebar from '../Sidebar/Sidebar';
 
 
-const Navbar = () => {
+const Navbar = (props) => {
     return  (
     <nav className={n.nav}>
     <div className={n.item}>
@@ -25,6 +26,7 @@ const Navbar = () => {
     <a href="#">Setings</a> 
      
     </div>
+    <Sidebar sidebar={props.sidebar}/>
     
   </nav>
     )

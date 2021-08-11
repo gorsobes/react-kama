@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import './App.css';
-import Dialogs from './components/Dialogs/Dialogs';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 import News from './components/News/News';
 import {Route} from "react-router-dom";
 const App = (props)=> {
@@ -14,10 +14,8 @@ const App = (props)=> {
      <Navbar sidebar={props.state.sidebar.friends} />
      <div className="app-wrapper-content">
      
-     <Route path='/dialogs' render={()=> <Dialogs store = {props.store} messageData={props.state.messagePage.messageData} dialogsData={props.state.messagePage.dialogsData} />} />
-     <Route path='/profile' render={()=> <Profile 
-     profilePage={props.state.profilePage} 
-     dispatch={props.dispatch}/>} />
+     <Route path='/dialogs' render={()=> <DialogsContainer store = {props.store} />} />
+     <Route path='/profile' render={()=> <Profile store = {props.store} />} />
      <Route path='/news' render={()=> <News/>} />
      </div>
    </div>

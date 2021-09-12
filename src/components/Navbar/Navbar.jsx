@@ -26,7 +26,7 @@ const Navbar = (props) => {
     <a href="#">Setings</a> 
      
     </div>
-    <Sidebar sidebar={props.sidebar}/>
+   {/*  <Sidebar sidebar={props.sidebar}/> */}
     
   </nav>
     )

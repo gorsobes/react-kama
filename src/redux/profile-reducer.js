@@ -18,12 +18,19 @@ let initialState = {
           massage:state.newPostText, 
           like:'0'
         };
-        state.posts.push(newPost);
-        state.newPostText='';
+        return{
+          ...state,
+          posts:[...state.posts,newPost],
+          newPostText:''
+        };
+       
         
       } else if (action.type === UPDATE_NEW_POST_TEXT){
-        state.newPostText = action.text;
-        
+        return{
+          ...state,
+          newPostText:action.text
+        };
+      
      }
     
 

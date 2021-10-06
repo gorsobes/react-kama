@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
-import Profile from './components/Profile/Profile';
+import ProfileContainer from './components/Profile/ProfileContainer';
 import './App.css';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import News from './components/News/News';
@@ -18,8 +18,8 @@ const App = (props)=> {
 
      <div className="app-wrapper-content">
      
-     <Route path='/dialogs' render={()=> <DialogsContainer store = {props.store} />} />
-     <Route path='/profile' render={()=> <Profile store = {props.store} />} />
+     <Route path='/dialogs' render={()=> <DialogsContainer/>} />
+     <Route path='/profile' render={()=> <ProfileContainer/>} />
      <Route path='/users' render={()=> <UsersContainer/>} />
      <Route path='/news' render={()=> <News/>} />
      </div>
